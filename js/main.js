@@ -21,12 +21,9 @@ function scrollLeft () {
   var circleSelection = $('i.active')
   circleSelection.removeClass('active')
 
-
-  var imageFirst = $('img.first');
-  var circleFirst = $('i.first')
-  if (imageFirst == true) {
-    imageLast.addClass('active');
-    circleLast.addClass('active');
+  if (imageSelection.hasClass('first') == true) {
+    $('img.last').addClass('active');
+    $('i.last').addClass('active');
   } else {
     imageSelection.prev().addClass('active');
     circleSelection.prev().addClass('active')
@@ -40,11 +37,9 @@ function scrollRight () {
   var circleSelection = $('i.active')
   circleSelection.removeClass('active')
 
-  var imageLast = $('img.last');
-  var circleLast = $('i.last')
-  if (imageLast == true && circleLast == true) {
-    imageFirst.addClass('active');
-    circleFirst.addClass('active');
+  if (imageSelection.hasClass('last') == true) {
+    $('img.first').addClass('active');
+    $('i.first').addClass('active');
   } else {
     imageSelection.next().addClass('active');
     circleSelection.next().addClass('active')
